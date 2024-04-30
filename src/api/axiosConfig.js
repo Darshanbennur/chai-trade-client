@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://16.170.217.19:4000/api/",
+  baseURL: "https://chai-trade-server.onrender.com",
   headers: {
     "Content-Type": "application/json",
   },
