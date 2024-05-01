@@ -125,10 +125,16 @@ const Featured_BlogCard = ({ blog }) => {
 
       <div id="timediv" style={{ paddingLeft: '75px' }}>
         <div dangerouslySetInnerHTML={{ __html: blog.content }} />
-
-        <p className="timeoncards" style={{ color: 'crimson', marginTop: '20px', textAlign: 'right' }}>
-          Posted on: {blog.time}
-        </p>
+        <div className="timeoncards" style={{ whiteSpace: 'nowrap', marginTop : "10px" }}>
+          <p style={{ display: 'inline-block', marginRight: '20px' }}>
+            Posted By : <span style={{ color: "green" }}>{blog.mentorEmail}</span>
+          </p>
+          <span style={{ marginLeft: "120px" }}>
+            Posted on : <span style={{ display: 'inline-block', color: 'crimson', marginTop: '20px', textAlign: 'right' }}>
+              {blog.time}
+            </span>
+          </span>
+        </div>
       </div>
     </div>
   );
